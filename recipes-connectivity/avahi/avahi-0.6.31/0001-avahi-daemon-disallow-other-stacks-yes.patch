@@ -1,0 +1,26 @@
+From e207dac6a301661b22585738a274d4ed9ab64b7c Mon Sep 17 00:00:00 2001
+From: Stefan Eichenberger <stefan.eichenberger@netmodule.com>
+Date: Wed, 12 Feb 2014 14:37:50 +0100
+Subject: [PATCH] avahi-daemon: disallow-other-stacks=yes
+
+Don't allow other stacks to avoid startup problem.
+---
+ avahi-daemon/avahi-daemon.conf |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/avahi-daemon/avahi-daemon.conf b/avahi-daemon/avahi-daemon.conf
+index c992842..0e81d0e 100644
+--- a/avahi-daemon/avahi-daemon.conf
++++ b/avahi-daemon/avahi-daemon.conf
+@@ -29,7 +29,7 @@ use-ipv6=no
+ #check-response-ttl=no
+ #use-iff-running=no
+ #enable-dbus=yes
+-#disallow-other-stacks=no
++disallow-other-stacks=yes
+ #allow-point-to-point=no
+ #cache-entries-max=4096
+ #clients-max=4096
+-- 
+1.7.10.4
+
