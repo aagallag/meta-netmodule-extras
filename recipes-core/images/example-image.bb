@@ -24,7 +24,7 @@ IMAGE_INSTALL_append = "packagegroup-core-boot \
                 fuse \
                 bittwist \
                 phy-access \
-                python \
+                python-core \
                 python-modules \
                 python-misc \
                 python-pysnmp \

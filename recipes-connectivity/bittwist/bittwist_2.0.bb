@@ -12,16 +12,16 @@ SRC_URI[sha256sum] = "7b98123d2bcb9bec59dc5e610c0c5b5749ef2ed83418956c3ddef3cf58
 
 S = "${WORKDIR}/${PN}-linux-${PV}"
 
-SRC="${S}/src/"
+SRC="${S}/src"
 
 do_compile () {
-    ${CC} ${SRC}/bittwist.c -o $(SRC)bittwist -lpcap
-    ${CC} ${SRC}/bittwiste.c -o $(SRC)bittwiste -lpcap
+    ${CC} ${SRC}/bittwist.c -o ${SRC}/bittwist -lpcap
+    ${CC} ${SRC}/bittwiste.c -o ${SRC}/bittwiste -lpcap
 
 }
 
 do_install () {
     mkdir -p ${D}${bindir}
-    install -m 0755 ${SRC}bittwist ${D}${bindir}
-    install -m 0755 ${SRC}bittwiste ${D}${bindir}
+    install -m 0755 ${SRC}/bittwist ${D}${bindir}
+    install -m 0755 ${SRC}/bittwiste ${D}${bindir}
 }
