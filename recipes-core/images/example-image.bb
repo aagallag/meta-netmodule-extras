@@ -29,6 +29,7 @@ IMAGE_INSTALL_append = "packagegroup-core-boot \
                 python-misc \
                 python-pysnmp \
                 python-construct \
+                lighttpd \
                 ${ROOTFS_PKGMANAGE_BOOTSTRAP} \
                 ${CORE_IMAGE_EXTRA_INSTALL} \
                 "    
